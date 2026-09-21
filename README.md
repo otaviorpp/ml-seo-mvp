@@ -1,3 +1,5 @@
+# TESTE DE PUBLICAÇÃO INTEIRAMENTE COM IA
+
 # Escolha — catálogo demonstrativo
 
 Projeto independente em Next.js, React e TypeScript. O catálogo atual usa exemplos e imagens ilustrativas; não representa ofertas ou avaliações verificadas.
