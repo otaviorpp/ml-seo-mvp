@@ -1,3 +1,4 @@
+# TESTE DE PUBLICAÇÃO INTEIRAMENTE COM IA
 # Escolha — MVP SEO + recomendações para Mercado Livre
 
 MVP para validar o fluxo **Google/SEO → recomendação → clique para Mercado Livre**.
