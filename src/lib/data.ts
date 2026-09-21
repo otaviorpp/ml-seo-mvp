@@ -132,7 +132,5 @@ export function getProduct(slug: string) {
 }
 
 export function productsByCategory(slug: string) {
-  return products
-    .filter((product) => product.categorySlug === slug)
-    .sort((a, b) => b.score - a.score);
+  return products.filter((product) => product.categorySlug === slug);
 }

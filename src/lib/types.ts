@@ -21,6 +21,8 @@ export type Product = {
   score: number;
   highlights: string[];
   mlUrl: string;
+  affiliateUrl?: string;
+  reviewed?: boolean;
 };
 
 export type EventType = "page_view" | "product_click" | "search";

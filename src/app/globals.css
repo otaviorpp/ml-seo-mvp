@@ -117,3 +117,7 @@ th { color: var(--muted); font-weight: 650; }
   .rank-image { max-width: 180px; }
   .admin-kpis { grid-template-columns: 1fr; }
 }
+
+.demo-notice { padding: 16px 0; background: #fff4d6; color: #45340a; line-height: 1.6; }
+.demo-notice a, .site-footer a { text-decoration: underline; }
+.affiliate-notice { font-size: 0.9rem; line-height: 1.6; margin: 12px 0; }

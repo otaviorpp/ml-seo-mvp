@@ -1,39 +1,24 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"),
-  title: {
-    default: "Escolha — compare antes do Mercado Livre",
-    template: "%s | Escolha"
-  },
-  description: "Compare produtos e chegue ao Mercado Livre sabendo o que vale considerar.",
-  openGraph: {
-    title: "Escolha melhor antes de comprar no Mercado Livre",
-    description: "Seleções curtas, diferenças claras e um próximo passo.",
-    type: "website"
-  }
+  title: { default: "Escolha — catálogo demonstrativo", template: "%s | Escolha" },
+  description: "Projeto independente de catálogo de produtos, em preparação.",
+  robots: { index: false, follow: false }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="pt-BR">
-      <body>
-        <Header />
-        {children}
-        <footer className="site-footer">
-          <div className="container footer-share">
-            <div>
-              <strong>Menos anúncios. Mais clareza.</strong>
-              <p>Envie a seleção para alguém que também está escolhendo.</p>
-            </div>
-            <a className="secondary-link" href="https://wa.me/?text=Veja%20estas%20recomenda%C3%A7%C3%B5es" target="_blank" rel="noreferrer">
-              Compartilhar no WhatsApp →
-            </a>
-          </div>
-        </footer>
-      </body>
-    </html>
-  );
+  return <html lang="pt-BR"><body>
+    <Header />
+    <aside className="demo-notice"><div className="container">
+      <strong>Catálogo demonstrativo.</strong> Imagens ilustrativas e informações ainda não verificadas. <Link href="/transparencia">Transparência e publicidade</Link>
+    </div></aside>
+    {children}
+    <footer className="site-footer"><div className="container">
+      <p>Escolha: projeto independente, sem representação oficial do Mercado Livre.</p>
+      <Link href="/transparencia">Transparência, publicidade e critérios editoriais</Link>
+    </div></footer>
+  </body></html>;
 }

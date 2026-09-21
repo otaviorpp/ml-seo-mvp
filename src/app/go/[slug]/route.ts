@@ -1,18 +1,9 @@
-import { NextRequest, NextResponse } from "next/server";
-import { getProduct } from "@/lib/data";
-import { addEvent } from "@/lib/store";
+import { NextResponse } from "next/server";
 
-export async function GET(request: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const product = getProduct(slug);
-  if (!product) return NextResponse.redirect(new URL("/", request.url));
-
-  addEvent({
-    type: "product_click",
-    productId: product.id,
-    path: request.nextUrl.searchParams.get("from") ?? undefined,
-    referrer: request.headers.get("referer") ?? undefined
-  });
-
-  return NextResponse.redirect(product.mlUrl, 307);
+// Legacy tracking links no longer redirect visitors to commercial pages.
+export function GET() {
+  return NextResponse.json(
+    { message: "Este link foi desativado. Acesse a página do produto para consultar as informações disponíveis." },
+    { status: 410, headers: { "X-Robots-Tag": "noindex", "Cache-Control": "no-store" } }
+  );
 }
