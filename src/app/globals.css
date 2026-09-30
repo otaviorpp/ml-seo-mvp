@@ -121,3 +121,35 @@ th { color: var(--muted); font-weight: 650; }
 .demo-notice { padding: 16px 0; background: #fff4d6; color: #45340a; line-height: 1.6; }
 .demo-notice a, .site-footer a { text-decoration: underline; }
 .affiliate-notice { font-size: 0.9rem; line-height: 1.6; margin: 12px 0; }
+
+/* SALLOZIDADE category identity */
+:root { --accent: #5b35bd; --accent-hover: #43248f; --background: #fffcf8; --surface: #f3f0ea; }
+.hero { background: linear-gradient(135deg, #f5eee4, #f0ecfb); }
+.hero h1 { max-width: 960px; }
+.brand { letter-spacing: -.035em; font-size: 23px; }
+.category-card { gap: 28px; background: var(--category-tint, white); border-top: 4px solid var(--accent); }
+.theme-casa-e-utilidades { --accent: #93491d; --accent-hover: #743711; --category-tint: #f7ede0; }
+.theme-informatica { --accent: #2253a5; --accent-hover: #163d7d; --category-tint: #eaf1fc; }
+.theme-tcg { --accent: #7340a2; --accent-hover: #532878; --category-tint: #f2eafb; }
+.category-hero { background: var(--category-tint); }
+.category-hero .affiliate-block { max-width: 620px; margin-top: 28px; }
+.category-hero .affiliate-notice { font-size: 14px; margin: 12px 0; }
+.primary-button { gap: 12px; line-height: 1.4; padding: 14px 20px; text-align: center; }
+.product-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 380px)); }
+.product-image-wrap { aspect-ratio: 1; }
+.product-image { object-fit: contain; }
+.product-gallery figure { margin: 0 0 24px; }
+.detail-image { height: auto; }
+figcaption { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 10px; }
+.detail-copy p, .detail-copy li, .reading-page p { line-height: 1.75; }
+.detail-copy li { margin-bottom: 12px; }
+.tips-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.tips-grid article { padding: 24px; background: white; border-radius: var(--radius); line-height: 1.7; }
+.reading-page { max-width: 800px; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+@media (max-width: 820px) {
+  .nav-row { height: auto; padding: 18px 0; flex-wrap: wrap; gap: 16px; }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 12px 20px; font-size: 13px; }
+  .tips-grid { grid-template-columns: 1fr; }
+  .hero { padding-top: 60px; }
+}

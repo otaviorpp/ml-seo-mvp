@@ -4,59 +4,27 @@ import { ProductCard } from "@/components/ProductCard";
 import { TrackPageView } from "@/components/TrackPageView";
 
 export default function Home() {
-  const featured = products.slice(0, 3);
-
-  return (
-    <main>
-      <TrackPageView path="/" />
-      <section className="hero">
-        <div className="container">
-          <span className="eyebrow">Catálogo em preparação</span>
-          <h1>Explore nosso catálogo demonstrativo.</h1>
-          <p>Explore exemplos de produtos. As ofertas e recomendações ainda não foram verificadas.</p>
-          <form className="hero-search" action="/busca" method="GET">
-            <input name="q" required minLength={2} placeholder="Ex.: cuba inox, furadeira 20 V..." aria-label="O que você procura?" />
-            <button className="primary-button" type="submit">Encontrar meu produto</button>
-          </form>
-          <div className="hero-proof">
-            <span><strong>{products.length}</strong> produtos no MVP</span>
-            <span><strong>{categories.length}</strong> nichos iniciais</span>
-            <span><strong>1</strong> próximo passo</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="section soft">
-        <div className="container">
-          <div className="section-heading">
-            <h2>Comece pelo que você quer comprar.</h2>
-            <p>Explore exemplos organizados por categoria.</p>
-          </div>
-          <div className="category-grid">
-            {categories.map((category, index) => (
-              <Link href={`/categoria/${category.slug}`} className="category-card" key={category.slug}>
-                <span className="category-number">0{index + 1}</span>
-                <div>
-                  <h3>{category.name}</h3>
-                  <p>{`Exemplos de produtos para ${category.name.toLowerCase()}.`}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="section-heading">
-            <h2>3 exemplos para explorar.</h2>
-            <p>A ordem é ilustrativa e não representa uma avaliação de qualidade.</p>
-          </div>
-          <div className="product-grid">
-            {featured.map((product) => <ProductCard product={product} key={product.id} />)}
-          </div>
-        </div>
-      </section>
-    </main>
-  );
+  return <main>
+    <TrackPageView path="/" />
+    <section className="hero"><div className="container">
+      <span className="eyebrow">Casa · Informática · TCG</span>
+      <h1>Seu espaço.<br />Seu setup. Sua coleção.</h1>
+      <p>Bem-vindo à SALLOZIDADE. Explore nossos interesses, descubra produtos e encontre a próxima escolha para sua rotina.</p>
+      <form className="hero-search" action="/busca" method="GET">
+        <input name="q" required minLength={2} placeholder="Busque na seleção: rack, sala…" aria-label="Buscar produtos" />
+        <button className="primary-button" type="submit">Explorar</button>
+      </form>
+    </div></section>
+    <section className="section soft"><div className="container">
+      <div className="section-heading"><h2>Três universos.<br />Uma SALLOZIDADE.</h2><p>Entre na categoria que combina com você.</p></div>
+      <div className="category-grid">{categories.map((category, index) => <Link href={`/categoria/${category.slug}`} className={`category-card theme-${category.slug}`} key={category.slug}>
+        <span className="category-number">0{index + 1} / {category.collectionUrl ? "Explore a seleção" : "Em preparação"}</span>
+        <div><h3>{category.name}</h3><p>{category.description}</p></div><span className="secondary-link">Explorar categoria →</span>
+      </Link>)}</div>
+    </div></section>
+    <section className="section"><div className="container">
+      <div className="section-heading"><h2>Em destaque para sua casa.</h2><Link className="secondary-link" href="/categoria/casa-e-utilidades">Ver Casa e Utilidades →</Link></div>
+      <div className="product-grid">{products.map(product => <ProductCard product={product} key={product.id} />)}</div>
+    </div></section>
+  </main>;
 }

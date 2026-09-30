@@ -2,23 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import { Header } from "@/components/Header";
-
 export const metadata: Metadata = {
-  title: { default: "Escolha — catálogo demonstrativo", template: "%s | Escolha" },
-  description: "Projeto independente de catálogo de produtos, em preparação.",
+  title: { default: "SALLOZIDADE — Casa, Informática e TCG", template: "%s | SALLOZIDADE" },
+  description: "Explore a seleção SALLOZIDADE de produtos para casa, equipamentos de informática e TCG.",
   robots: { index: false, follow: false }
 };
-
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="pt-BR"><body>
-    <Header />
-    <aside className="demo-notice"><div className="container">
-      <strong>Catálogo demonstrativo.</strong> Imagens ilustrativas e informações ainda não verificadas. <Link href="/transparencia">Transparência e publicidade</Link>
-    </div></aside>
+  return <html lang="pt-BR"><body><Header />
     {children}
     <footer className="site-footer"><div className="container">
-      <p>Escolha: projeto independente, sem representação oficial do Mercado Livre.</p>
-      <Link href="/transparencia">Transparência, publicidade e critérios editoriais</Link>
+      <strong className="brand">SALLOZIDADE<span>.</span></strong>
+      <p>Casa, tecnologia e coleção. Um projeto independente, sem representação oficial do Mercado Livre.</p>
+      <p>Publicidade: podemos receber comissão por compras qualificadas nos links de afiliado.</p>
+      <Link href="/transparencia">Transparência e critérios da seleção</Link>
     </div></footer>
   </body></html>;
 }

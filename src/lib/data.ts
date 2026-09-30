@@ -2,135 +2,35 @@ import type { Category, Product } from "./types";
 
 export const categories: Category[] = [
   {
-    slug: "cozinha",
-    name: "Cozinha",
-    eyebrow: "Escolhas para cozinha",
-    headline: "Produtos que valem comparar antes de comprar.",
-    description: "Uma seleção curta para decidir rápido, sem abrir vinte anúncios diferentes."
+    slug: "casa-e-utilidades", name: "Casa e Utilidades", eyebrow: "Seu espaço, do seu jeito",
+    headline: "Ideias para a casa. Utilidade para o dia a dia.",
+    description: "Explore nossa lista de móveis, organização e utilidades para os ambientes da sua casa.",
+    collectionUrl: "https://meli.la/1RN5JWu",
+    tips: ["Meça o ambiente e os acessos antes de escolher um móvel.", "Confira materiais, montagem e itens incluídos no anúncio.", "Consulte frete, prazo e condições de entrega para seu CEP."]
   },
   {
-    slug: "banheiro",
-    name: "Banheiro",
-    eyebrow: "Escolhas para banheiro",
-    headline: "Veja o que muda de verdade entre os modelos.",
-    description: "Comparamos preço, uso e diferenças que costumam pesar na decisão."
+    slug: "informatica", name: "Informática", eyebrow: "Tecnologia que acompanha sua rotina",
+    headline: "Seu próximo setup começa com uma boa escolha.",
+    description: "Um espaço para equipamentos e acessórios de informática, do trabalho aos jogos. Nossa seleção está em preparação.",
+    tips: ["Confira conexões, dimensões e compatibilidade com seu equipamento.", "Escolha as especificações de acordo com os programas e jogos que usa.", "Verifique garantia, voltagem e acessórios incluídos."]
   },
   {
-    slug: "ferramentas",
-    name: "Ferramentas",
-    eyebrow: "Escolhas de ferramentas",
-    headline: "Menos anúncios. Mais clareza para escolher.",
-    description: "Recomendações diretas para chegar ao Mercado Livre sabendo o que procurar."
+    slug: "tcg", name: "TCG", eyebrow: "Para jogar, colecionar e cuidar",
+    headline: "Um lugar para a sua próxima coleção.",
+    description: "Cartas, jogos e acessórios para o universo dos Trading Card Games. Em breve, uma seleção para sua mesa e sua coleção.",
+    tips: ["Confira o jogo, a edição, o idioma e a condição das cartas.", "Verifique a procedência e a descrição do vendedor antes de comprar.", "Produtos aleatórios não garantem cartas específicas ou valorização financeira."]
   }
 ];
 
-export const products: Product[] = [
-  {
-    id: "p1",
-    slug: "cuba-inox-60cm",
-    categorySlug: "cozinha",
-    name: "Cuba inox 60 cm",
-    brand: "Seleção",
-    image: "/products/cuba.svg",
-    price: 489.9,
-    rating: 4.8,
-    reviewCount: 1280,
-    bestFor: "cozinhas maiores",
-    summary: "Bom espaço interno sem partir para uma cuba exageradamente grande.",
-    score: 94,
-    highlights: ["60 cm", "inox", "bom espaço útil"],
-    mlUrl: "https://lista.mercadolivre.com.br/cuba-inox-60cm"
-  },
-  {
-    id: "p2",
-    slug: "cuba-gourmet-com-acessorios",
-    categorySlug: "cozinha",
-    name: "Cuba gourmet com acessórios",
-    brand: "Seleção",
-    image: "/products/cuba-gourmet.svg",
-    price: 699.9,
-    rating: 4.7,
-    reviewCount: 842,
-    bestFor: "quem quer kit completo",
-    summary: "Faz sentido quando escorredor, tábua e dosador entram de fato na rotina.",
-    score: 89,
-    highlights: ["kit completo", "acessórios", "visual gourmet"],
-    mlUrl: "https://lista.mercadolivre.com.br/cuba-gourmet-acessorios"
-  },
-  {
-    id: "p3",
-    slug: "torneira-monocomando",
-    categorySlug: "cozinha",
-    name: "Torneira monocomando",
-    brand: "Seleção",
-    image: "/products/torneira.svg",
-    price: 329.9,
-    rating: 4.8,
-    reviewCount: 2014,
-    bestFor: "controle simples de temperatura",
-    summary: "Uma escolha prática para quem quer regular vazão e temperatura em um comando.",
-    score: 91,
-    highlights: ["monocomando", "bica alta", "uso diário"],
-    mlUrl: "https://lista.mercadolivre.com.br/torneira-monocomando-cozinha"
-  },
-  {
-    id: "p4",
-    slug: "chuveiro-alta-vazao",
-    categorySlug: "banheiro",
-    name: "Chuveiro de alta vazão",
-    brand: "Seleção",
-    image: "/products/chuveiro.svg",
-    price: 259.9,
-    rating: 4.7,
-    reviewCount: 1560,
-    bestFor: "banhos com jato mais amplo",
-    summary: "Prioriza área de banho e conforto; vale conferir a pressão disponível antes da compra.",
-    score: 92,
-    highlights: ["jato amplo", "acabamento simples", "fácil comparação"],
-    mlUrl: "https://lista.mercadolivre.com.br/chuveiro-alta-vazao"
-  },
-  {
-    id: "p5",
-    slug: "furadeira-parafusadeira-20v",
-    categorySlug: "ferramentas",
-    name: "Furadeira e parafusadeira 20 V",
-    brand: "Seleção",
-    image: "/products/furadeira.svg",
-    price: 549.9,
-    rating: 4.9,
-    reviewCount: 3421,
-    bestFor: "uso doméstico frequente",
-    summary: "Equilibra autonomia e força para montagem, manutenção e pequenos furos.",
-    score: 96,
-    highlights: ["20 V", "bateria", "dupla função"],
-    mlUrl: "https://lista.mercadolivre.com.br/furadeira-parafusadeira-20v"
-  },
-  {
-    id: "p6",
-    slug: "lavadora-alta-pressao",
-    categorySlug: "ferramentas",
-    name: "Lavadora de alta pressão",
-    brand: "Seleção",
-    image: "/products/lavadora.svg",
-    price: 649.9,
-    rating: 4.8,
-    reviewCount: 2298,
-    bestFor: "limpeza externa da casa",
-    summary: "Boa candidata para pátios, muros e carros quando mangueira comum começa a limitar.",
-    score: 93,
-    highlights: ["uso externo", "compacta", "boa vazão"],
-    mlUrl: "https://lista.mercadolivre.com.br/lavadora-alta-pressao"
-  }
-];
+export const products: Product[] = [{
+  id: "rack-tv", slug: "rack-para-tv", categorySlug: "casa-e-utilidades",
+  name: "Rack para TV", image: "/assets/RACK-TV-55-POLEGADAS(2).webp",
+  gallery: ["/assets/RACK-TV-55-POLEGADAS(2).webp", "/assets/RACK-TV-55-POLEGADAS.webp"],
+  bestFor: "sala e organização", summary: "Um destaque da nossa seleção para a sala, com espaço para organizar o ambiente da TV. Confira as especificações e variações no anúncio.",
+  highlights: ["Confira as medidas do móvel e da base da sua TV.", "Consulte as cores, o material e as condições de montagem.", "As imagens de referência podem mostrar objetos não incluídos."],
+  affiliateUrl: "https://meli.la/2LHVEue"
+}];
 
-export function getCategory(slug: string) {
-  return categories.find((category) => category.slug === slug);
-}
-
-export function getProduct(slug: string) {
-  return products.find((product) => product.slug === slug);
-}
-
-export function productsByCategory(slug: string) {
-  return products.filter((product) => product.categorySlug === slug);
-}
+export function getCategory(slug: string) { return categories.find(category => category.slug === slug); }
+export function getProduct(slug: string) { return products.find(product => product.slug === slug); }
+export function productsByCategory(slug: string) { return products.filter(product => product.categorySlug === slug); }

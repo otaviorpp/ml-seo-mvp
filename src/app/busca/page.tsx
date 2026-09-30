@@ -26,7 +26,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
         <div className="container">
           <span className="eyebrow">Busca</span>
           <h1>{query ? `Resultados para “${query}”` : "O que você quer encontrar?"}</h1>
-          <p>{results.length ? `${results.length} produto(s) encontrado(s) no MVP.` : "Ainda não temos uma recomendação para esta busca."}</p>
+          <p>{results.length ? `${results.length} produto(s) encontrado(s) na SALLOZIDADE.` : "Ainda não há produtos cadastrados para esta busca."}</p>
         </div>
       </section>
       <section className="section search-results">
@@ -36,7 +36,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
               {results.map((product) => <ProductCard key={product.id} product={product} />)}
             </div>
           ) : (
-            <div className="empty">Tente “cuba”, “furadeira”, “chuveiro” ou “torneira”.</div>
+            <div className="empty">Tente “rack” ou “sala”. Informática e TCG receberão produtos em breve.</div>
           )}
         </div>
       </section>

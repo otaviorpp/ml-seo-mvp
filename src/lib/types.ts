@@ -4,6 +4,8 @@ export type Category = {
   eyebrow: string;
   headline: string;
   description: string;
+  collectionUrl?: string;
+  tips: string[];
 };
 
 export type Product = {
@@ -11,22 +13,15 @@ export type Product = {
   slug: string;
   categorySlug: string;
   name: string;
-  brand: string;
   image: string;
-  price: number;
-  rating: number;
-  reviewCount: number;
+  gallery: string[];
   bestFor: string;
   summary: string;
-  score: number;
   highlights: string[];
-  mlUrl: string;
-  affiliateUrl?: string;
-  reviewed?: boolean;
+  affiliateUrl: string;
 };
 
 export type EventType = "page_view" | "product_click" | "search";
-
 export type AnalyticsEvent = {
   id: string;
   type: EventType;
